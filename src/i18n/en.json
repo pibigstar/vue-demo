@@ -1,0 +1,9 @@
+{
+
+    "phone": "phone",
+
+    "error":{
+        "ERROR_NOT_FOUND": "Not Found",
+        "ERROR_INTERNAL": "internal serve error"
+    }
+}
