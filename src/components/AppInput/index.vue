@@ -1,7 +1,8 @@
 <template>
     <el-input
       :placeholder="placeholder"
-      v-model="inputVal"
+      v-model="value"
+      @input="changeValue"
     >
     </el-input>
 </template>
@@ -11,37 +12,35 @@ export default {
   props: {
     inputVal: {
       type: String,
-      default: 'dd',
+      default: '',
     },
     placeholder: {
       type: String,
-      default: 'ff',
-    }
+      default: '',
+    },
   },
 
   watch:{
-  inputVal:function(newVal,oldVal){
-    this.inputVal = newVal;
-  }
-},
-  mounted(){
-    console.log("=========================")
-    console.log(this.inputVal)
+      inputVal:function(newVal){
+        this.value = newVal;
+      }
   },
 
-  data() {
-    return {
-      inputVal: "pibigstar",
-      placeholder: "请输入内容ssss",
-    }
+  data(){
+      return{
+          value: '',
+      }
+  },
+  mounted(){
+    console.log("==========页面加载完成=========")
+    this.value = this.inputVal
   },
 
   methods: {
-    changeValue(){
-      console.log("*************")
-      this.$emit(changeMethod,inputVal)
-    }
+      changeValue: function () {
+          this.$emit('changeValue', this.value)
+      }
   },
-
-
 }
+
+</script>

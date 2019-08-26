@@ -2,7 +2,11 @@
     <div class="content">
         <div>子组件中的</div>
         <br>
-        <app-input></app-input>
+        <app-input
+           placeholder="请输出子组件内容"
+           inputVal="父组件的值"
+           @changeValue="changeInfo"
+        ></app-input>
     <br>
     <div>父组件中的</div>
     <br>
