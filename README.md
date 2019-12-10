@@ -1,29 +1,21 @@
-# vue-project
+# vue-demo
 
-## Project setup
+- [x] Element框架
+- [x] i18n
+- [x] 跨域问题
+- [x] 组件封装
+
+### 安装
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
